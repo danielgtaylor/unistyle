@@ -106,9 +106,9 @@ func offsetTranslate(text string, offsets [][]rune) string {
 // equivalents. Characters without a bolded equivalent are left untouched.
 func BoldSans(text string) string {
 	offsets := [][]rune{
-		[]rune{'A', 'Z', '𝗔'},
-		[]rune{'a', 'z', '𝗮'},
-		[]rune{'0', '9', '𝟬'},
+		{'A', 'Z', '𝗔'},
+		{'a', 'z', '𝗮'},
+		{'0', '9', '𝟬'},
 	}
 
 	return offsetTranslate(text, offsets)
@@ -118,9 +118,9 @@ func BoldSans(text string) string {
 // equivalents. Characters without a bolded equivalent are left untouched.
 func BoldSerif(text string) string {
 	offsets := [][]rune{
-		[]rune{'A', 'Z', '𝐀'},
-		[]rune{'a', 'z', '𝐚'},
-		[]rune{'0', '9', '𝟎'},
+		{'A', 'Z', '𝐀'},
+		{'a', 'z', '𝐚'},
+		{'0', '9', '𝟎'},
 	}
 
 	return offsetTranslate(text, offsets)
@@ -131,8 +131,8 @@ func BoldSerif(text string) string {
 // untouched.
 func ItalicSans(text string) string {
 	offsets := [][]rune{
-		[]rune{'A', 'Z', '𝘈'},
-		[]rune{'a', 'z', '𝘢'},
+		{'A', 'Z', '𝘈'},
+		{'a', 'z', '𝘢'},
 	}
 
 	return offsetTranslate(text, offsets)
@@ -143,8 +143,8 @@ func ItalicSans(text string) string {
 // untouched.
 func ItalicSerif(text string) string {
 	offsets := [][]rune{
-		[]rune{'A', 'Z', '𝐴'},
-		[]rune{'a', 'z', '𝑎'},
+		{'A', 'Z', '𝐴'},
+		{'a', 'z', '𝑎'},
 	}
 
 	return offsetTranslate(text, offsets)
@@ -156,9 +156,9 @@ func ItalicSerif(text string) string {
 // left untouched.
 func BoldItalicSans(text string) string {
 	offsets := [][]rune{
-		[]rune{'A', 'Z', '𝘼'},
-		[]rune{'a', 'z', '𝙖'},
-		[]rune{'0', '9', '𝟬'},
+		{'A', 'Z', '𝘼'},
+		{'a', 'z', '𝙖'},
+		{'0', '9', '𝟬'},
 	}
 
 	return offsetTranslate(text, offsets)
@@ -170,9 +170,9 @@ func BoldItalicSans(text string) string {
 // left untouched.
 func BoldItalicSerif(text string) string {
 	offsets := [][]rune{
-		[]rune{'A', 'Z', '𝑨'},
-		[]rune{'a', 'z', '𝒂'},
-		[]rune{'0', '9', '𝟎'},
+		{'A', 'Z', '𝑨'},
+		{'a', 'z', '𝒂'},
+		{'0', '9', '𝟎'},
 	}
 
 	return offsetTranslate(text, offsets)
@@ -184,26 +184,26 @@ func Cursive(text string) string {
 	// There is no single group of these unfortunately, so we need a separate
 	// set for each non-contiguous grouping.
 	offsets := [][]rune{
-		[]rune{'A', 'A', '𝒜'},
-		[]rune{'B', 'B', 'ℬ'},
-		[]rune{'C', 'D', '𝒞'},
-		[]rune{'E', 'F', 'ℰ'},
-		[]rune{'G', 'G', '𝒢'},
-		[]rune{'H', 'H', 'ℋ'},
-		[]rune{'I', 'I', 'ℐ'},
-		[]rune{'J', 'K', '𝒥'},
-		[]rune{'L', 'L', 'ℒ'},
-		[]rune{'M', 'M', 'ℳ'},
-		[]rune{'N', 'Q', '𝒩'},
-		[]rune{'R', 'R', 'ℛ'},
-		[]rune{'S', 'Z', '𝒮'},
-		[]rune{'a', 'd', '𝒶'},
-		[]rune{'e', 'e', 'ℯ'},
-		[]rune{'f', 'f', '𝒻'},
-		[]rune{'g', 'g', 'ℊ'},
-		[]rune{'h', 'n', '𝒽'},
-		[]rune{'o', 'o', 'ℴ'},
-		[]rune{'p', 'z', '𝓅'},
+		{'A', 'A', '𝒜'},
+		{'B', 'B', 'ℬ'},
+		{'C', 'D', '𝒞'},
+		{'E', 'F', 'ℰ'},
+		{'G', 'G', '𝒢'},
+		{'H', 'H', 'ℋ'},
+		{'I', 'I', 'ℐ'},
+		{'J', 'K', '𝒥'},
+		{'L', 'L', 'ℒ'},
+		{'M', 'M', 'ℳ'},
+		{'N', 'Q', '𝒩'},
+		{'R', 'R', 'ℛ'},
+		{'S', 'Z', '𝒮'},
+		{'a', 'd', '𝒶'},
+		{'e', 'e', 'ℯ'},
+		{'f', 'f', '𝒻'},
+		{'g', 'g', 'ℊ'},
+		{'h', 'n', '𝒽'},
+		{'o', 'o', 'ℴ'},
+		{'p', 'z', '𝓅'},
 	}
 
 	return offsetTranslate(text, offsets)
@@ -215,16 +215,16 @@ func Fraktur(text string) string {
 	// There is no single group of these unfortunately, so we need a separate
 	// set for each non-contiguous grouping.
 	offset := [][]rune{
-		[]rune{'A', 'B', '𝔄'},
-		[]rune{'C', 'C', 'ℭ'},
-		[]rune{'D', 'G', '𝔇'},
-		[]rune{'H', 'H', 'ℌ'},
-		[]rune{'I', 'I', 'ℑ'},
-		[]rune{'J', 'Q', '𝔍'},
-		[]rune{'R', 'R', 'ℜ'},
-		[]rune{'S', 'Y', '𝔖'},
-		[]rune{'Z', 'Z', 'ℨ'},
-		[]rune{'a', 'z', '𝔞'},
+		{'A', 'B', '𝔄'},
+		{'C', 'C', 'ℭ'},
+		{'D', 'G', '𝔇'},
+		{'H', 'H', 'ℌ'},
+		{'I', 'I', 'ℑ'},
+		{'J', 'Q', '𝔍'},
+		{'R', 'R', 'ℜ'},
+		{'S', 'Y', '𝔖'},
+		{'Z', 'Z', 'ℨ'},
+		{'a', 'z', '𝔞'},
 	}
 
 	return offsetTranslate(text, offset)

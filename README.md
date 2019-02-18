@@ -1,5 +1,7 @@
 # Unistyle
 
+[![GoDoc](https://godoc.org/github.com/danielgtaylor/unistyle?status.svg)](https://godoc.org/github.com/danielgtaylor/unistyle) [![Go Report Card](https://goreportcard.com/badge/github.com/danielgtaylor/unistyle)](https://goreportcard.com/report/github.com/danielgtaylor/unistyle)
+
 Unicode text styles for Go:
 
 - 𝗕𝗼𝗹𝗱
@@ -14,9 +16,9 @@ Unicode text styles for Go:
 
 These styles are split into two categories:
 
-1. Unicode includes a table of [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_character) that can be used to modify the previous character in a string. This allows for effects like bold and italic as well as underline, overline, and strikethrough.
+1. Unicode includes a table of [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_character) that can be used to modify the previous character in a string. This allows for effects like underline, overline, and strikethrough.
 
-2. Unicode includes multiple styles for most common characters. Using a character offset replacement mapping you can transform strings into their cursive or other styled equivalents.
+2. Unicode includes multiple styles for most common characters. Using a character offset replacement mapping you can transform strings into their bold, italic, cursive or other styled equivalents.
 
 ## Usage Example
 
